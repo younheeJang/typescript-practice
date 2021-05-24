@@ -1,9 +1,11 @@
 "use strict";
 exports.__esModule = true;
+var CsvFileReader_1 = require("./CsvFileReader");
 var MatchResults_1 = require("./MatchResults");
 var MatchReader_1 = require("./MatchReader");
-var reader = new MatchReader_1.MatchReader('football.csv');
-reader.read();
+var csvFileReader = new CsvFileReader_1.CsvFileReader('football.csv');
+var matchReader = new MatchReader_1.MatchReader(csvFileReader);
+matchReader.load();
 var manUnitedWins = 0;
 for (var _i = 0, _a = reader.data; _i < _a.length; _i++) {
     var match = _a[_i];
