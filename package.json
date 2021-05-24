@@ -6,7 +6,10 @@
   "scripts": {
     "start:build": "tsc  ./sort/src/index.ts --outDir ./sort/build -w",
     "start:run": "nodemon ./sort/build/index.js",
-    "start": "concurrently npm:start:*"
+    "start": "concurrently npm:start:*",
+    "stats:build": "tsc ./stats/src/index.ts -w",
+    "stats:run": "nodemon ./stats/build/index.js",
+    "stats": "concurrently npm:stats:*"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,7 @@
   "dependencies": {
     "@types/faker": "^5.5.5",
     "@types/googlemaps": "^3.43.3",
+    "@types/node": "^15.6.0",
     "axios": "^0.21.1",
     "concurrently": "^6.1.0",
     "faker": "^5.5.3",
