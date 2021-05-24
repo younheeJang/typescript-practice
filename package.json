@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:build": "tsc ./sort/src/index.ts --outDir ./sort/build -w",
+    "start:build": "tsc  ./sort/src/index.ts --outDir ./sort/build -w",
     "start:run": "nodemon ./sort/build/index.js",
     "start": "concurrently npm:start:*"
   },
