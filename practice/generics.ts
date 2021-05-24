@@ -19,4 +19,48 @@ class ArrayOfAnything<T> {
   }
 }
 
-new ArrayOfAnything<string>(['a', 'g']);
+const array = new ArrayOfAnything(['a', 'g']);
+
+function printStrings(array: string[]): void {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+}
+
+function printNumbers(array: number[]): void {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+}
+
+function printAnything<T>(array: T[]): void {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+}
+
+printAnything<string>(['a', 'g']);
+
+class House {
+  print() {
+    console.log('house');
+  }
+}
+
+class Car2 {
+  print() {
+    console.log('car');
+  }
+}
+
+interface Printable {
+  print(): void;
+}
+
+function printHousesOrCars<T extends Printable>(array: T[]): void {
+  for (let i = 0; i < array.length; i++) {
+    array[i].print();
+  }
+}
+printHousesOrCars<House>([new House(), new House()]);
+printHousesOrCars<Car2>([new Car2(), new Car2()]);
