@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "name": "curi",
-      "age": 33,
-      "id": 1
+      "id": 1,
+      "name": "newer name",
+      "age": 99
     },
     {
       "id": 2,
