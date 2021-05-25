@@ -9,7 +9,8 @@
     "start": "concurrently npm:start:*",
     "stats:build": "tsc ./stats/src/index.ts -w",
     "stats:run": "nodemon ./stats/build/index.js",
-    "stats": "concurrently npm:stats:*"
+    "stats": "concurrently npm:stats:*",
+    "web": "parcel ./web/index.html"
   },
   "repository": {
     "type": "git",
