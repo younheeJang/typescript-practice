@@ -10,7 +10,8 @@
     "stats:build": "tsc ./stats/src/index.ts -w",
     "stats:run": "nodemon ./stats/build/index.js",
     "stats": "concurrently npm:stats:*",
-    "web": "parcel ./web/index.html"
+    "web": "parcel ./web/index.html",
+    "web:db": "json-server -w ./web/db.json"
   },
   "repository": {
     "type": "git",
