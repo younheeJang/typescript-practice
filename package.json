@@ -12,7 +12,7 @@
     "stats": "concurrently npm:stats:*",
     "web": "parcel ./web/index.html",
     "web:db": "json-server -w ./web/db.json",
-    "server:build": "tsc ./server/src/index.ts -w --outDir ./server/build",
+    "server:build": "tsc ./server/src/index.ts ./server/src/controllers/decorators/controller.ts ./server/src/controllers/decorators/index.ts ./server/src/controllers/decorators/routes.ts ./server/src/controllers/LoginControllers.ts -w --outDir ./server/build",
     "server:run": "nodemon ./server/build/index.js",
     "server": "concurrently npm:server:*"
   },
@@ -40,7 +40,8 @@
     "cookie-session": "^1.4.0",
     "express": "^4.17.1",
     "faker": "^5.5.3",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "typescript": "^4.2.4"
